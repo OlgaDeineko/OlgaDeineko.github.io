@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('itemList', []).component('itemList', {
-    templateUrl: 'app/item-list/item-list.html',
+    templateUrl: '../../app/item-list/item-list.html',
     controller: ['Items','$sce', '$localStorage','$scope',function ItemListController(Items,$sce,$localStorage,$scope) {
       var self = this;
       if(typeof $localStorage.items == "undefined" ){
