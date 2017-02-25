@@ -15,7 +15,7 @@
                 <h2 class="chapter">Items</h2>
                 <form class="pure-form">
                     <input type="text" placeholder="Type name here..." class="pure-input-2-3" press-enter="$ctrl.addItem()" ng-model="$ctrl.name" ng-focus="$ctrl.frameDisplayed = false">
-                    <input class="pure-button pure-button-secondary"  type="button" value="Add new"  ng-click="$ctrl.addItem()">
+                    <input class="pure-button pure-button-secondary button-small"  type="button" value="Add new"  ng-click="$ctrl.addItem()">
                 </form>
                 <ul id="itemList" li-select>
                     <li class="item" ng-repeat="item in $ctrl.items">
