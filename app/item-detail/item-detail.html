@@ -1,0 +1,17 @@
+<div class="comments">
+    <h2 class="chapter">Comments #{{$ctrl.item.id}}</h2>
+    <ul>
+        <li ng-repeat="com in $ctrl.item.itemComments">
+            <div class="pure-u-1-5">
+                <span ng-class-odd="'odd'" ng-class-even="'even'"></span>
+            </div>
+            <div class="pure-u-1-2">
+                <p>{{com}}</p>
+            </div>
+        </li>
+    </ul>
+    <form class="pure-form">
+        <div class="squareDefault"></div>
+        <textarea placeholder="Enter the comment..." press-enter="$ctrl.addComment()" ng-model="$ctrl.description" ></textarea>
+    </form>
+</div>

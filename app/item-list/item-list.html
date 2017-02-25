@@ -1,0 +1,33 @@
+<div class="pure-g-r">
+    <div class="pure-u-1-5">
+        <div class="navigation">
+            <h2 class="chapter">Main</h2>
+            <div class="pure-menu pure-menu-open">
+                <ul>
+                    <li ><a href="#!/items">Overview</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="pure-u-2-5">
+        <div class="box">
+                <h2 class="chapter">Items</h2>
+                <form class="pure-form">
+                    <input type="text" placeholder="Type name here..." class="pure-input-2-3" press-enter="$ctrl.addItem()" ng-model="$ctrl.name" ng-focus="$ctrl.frameDisplayed = false">
+                    <input class="pure-button pure-button-secondary"  type="button" value="Add new"  ng-click="$ctrl.addItem()">
+                </form>
+                <ul id="itemList" li-select>
+                    <li class="item" ng-repeat="item in $ctrl.items">
+                        <a ng-click="$ctrl.setItem(item.id)" href="">{{item.name}}</a>
+                            <button class="countComment">{{$ctrl.setItemLength(item.id)}}</button>
+                        <button class="pure-button button-small  delete" type="submit" ng-click="$ctrl.deleteItem(item)">Delete</button>
+                        <!--<hr>-->
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <div class="pure-u-2-5">
+        <iframe seamless ng-if="$ctrl.frameDisplayed" iframe-auto-size ng-src={{$ctrl.currentItemUrl}}></iframe>
+    </div>
+</div>
